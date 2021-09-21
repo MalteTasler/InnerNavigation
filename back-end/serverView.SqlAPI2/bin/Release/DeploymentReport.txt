@@ -1,0 +1,48 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Server]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Drop
+       unnamed constraint on [dbo].[Server] (Default Constraint)
+       unnamed constraint on [dbo].[Server] (Foreign Key)
+       unnamed constraint on [dbo].[Server] (Foreign Key)
+       unnamed constraint on [dbo].[Service] (Foreign Key)
+     Table rebuild
+       [dbo].[Server] (Table)
+     Create
+       [dbo].[Address] (Table)
+       [dbo].[Location] (Table)
+       [dbo].[Room] (Table)
+       [dbo].[Sector] (Table)
+       Default Constraint: unnamed constraint on [dbo].[Address] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Location] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Room] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Sector] (Default Constraint)
+       Foreign Key: unnamed constraint on [dbo].[Server] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[Location] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[Room] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[Sector] (Foreign Key)
+       [dbo].[viAddress] (View)
+       [dbo].[viLocation] (View)
+       [dbo].[viRoom] (View)
+       [dbo].[viSector] (View)
+     Alter
+       [dbo].[viServer] (View)
+       [dbo].[CreateServer] (Procedure)
+
+** Supporting actions
+     Create
+       Foreign Key: unnamed constraint on [dbo].[Server] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[Server] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[Service] (Foreign Key)
+     Refresh
+       [dbo].[viService] (View)
+       [dbo].[CreateService] (Procedure)
+       [dbo].[DeleteServer] (Procedure)

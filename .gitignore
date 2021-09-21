@@ -1,0 +1,15 @@
+*.log
+back-end/.vs/
+back-end/serverView.SqlAPI.dbmdl
+back-end/serverView.SqlAPI.jfm
+back-end/serverView.SqlAPI2/serverView.SqlAPI.dbmdl
+
+back-end/serverView.SqlAPI2/serverView.SqlAPI.jfm
+
+back-end/Appointment.WebAPI/bin/Debug
+
+back-end/Appointment.WebAPI/obj/
+
+back-end/serverView.SqlAPI2/obj/
+
+back-end/serverView.SqlAPI2/bin/debug

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4546874e-57fa-4f38-abff-14edc84e4fda" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Appointment/.idea/dataSources/f4d0403b-54d2-44bd-bbd1-739b106b55c8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Appointment/.idea/dataSources/f4d0403b-54d2-44bd-bbd1-739b106b55c8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Appointment/.idea/dataSources/f4d0403b-54d2-44bd-bbd1-739b106b55c8/storage_v2/_src_/database/20Training-Appointment-MT.6svmHw/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Appointment/.idea/dataSources/f4d0403b-54d2-44bd-bbd1-739b106b55c8/storage_v2/_src_/database/20Training-Appointment-MT.6svmHw/schema/dbo.sYMBAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Appointment/.idea/dataSources/f4d0403b-54d2-44bd-bbd1-739b106b55c8/storage_v2/_src_/database/20Training-Appointment-MT.6svmHw/schema/dbo.sYMBAA.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Appointment/.idea/dataSources/f4d0403b-54d2-44bd-bbd1-739b106b55c8/storage_v2/_src_/database/20Training-Appointment-MT.6svmHw/schema/dbo.sYMBAA.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Appointment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Appointment/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Appointment.WebAPI/Models/AppointmentDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Appointment.WebAPI/Models/AppointmentDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Appointment.WebAPI/Repositories/AppointmentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Appointment.WebAPI/Repositories/AppointmentRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Appointment.WebAPI/bin/Debug/netcoreapp3.1/Appointment.Web.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Appointment.WebAPI/bin/Debug/netcoreapp3.1/Appointment.Web.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Appointment.WebAPI/bin/Debug/netcoreapp3.1/Appointment.Web.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Appointment.WebAPI/bin/Debug/netcoreapp3.1/Appointment.Web.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Appointment.WebAPI/obj/Debug/netcoreapp3.1/Appointment.Web.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Appointment.WebAPI/obj/Debug/netcoreapp3.1/Appointment.Web.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Appointment.WebAPI/obj/Debug/netcoreapp3.1/Appointment.Web.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Appointment.WebAPI/obj/Debug/netcoreapp3.1/Appointment.Web.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/StoreProcedure/CreateAppointment.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Database/StoreProcedure/CreateAppointment.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/Tables/ChaynsUser.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Database/Tables/ChaynsUser.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1l9FSQsxPocnVRHpPgXytGyLlys" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4546874e-57fa-4f38-abff-14edc84e4fda" name="Default Changelist" comment="" />
+      <created>1607001402649</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607001402649</updated>
+      <workItem from="1607001407996" duration="1234000" />
+      <workItem from="1608414554644" duration="17000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
