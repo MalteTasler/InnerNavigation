@@ -1,0 +1,89 @@
+.canvas{
+    margin-top:24px;
+}
+.main{
+    display:flex;
+    flex-direction: column;
+}
+.settingsLevelFrame{
+    padding: 24px;
+}
+.square{
+    width: 29px;
+    height:29px;
+    background-color:yellow;
+    display:grid;
+    cursor:pointer;
+    grid-template-columns: auto auto;
+}
+.lineSquare:hover{
+    border: solid 2px lightgray;
+}
+.betweenSquare > .leftTop:hover{
+    border-top: solid 2px lightgray;
+    border-left: solid 2px lightgray;
+
+
+}
+.betweenSquare > .rightTop:hover{
+    border-top: solid 2px lightgray;
+    border-right: solid 2px lightgray;
+
+}
+.betweenSquare> .leftBottom:hover{
+    border-bottom: solid 2px lightgray;
+    border-left: solid 2px lightgray;
+}
+.betweenSqaure > .rightBottom:hover{
+    border-right: solid 2px lightgray;
+    border-bottom: solid 2px lightgray;
+
+}
+.square > .leftTop{
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+
+
+}
+.square > .rightTop{
+    border-bottom: solid 2px black;
+
+}
+.square> .leftBottom{
+    border-right: solid 2px black;
+
+}
+.sqaure > .rightBottom{
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+
+}
+.squareCover{
+    display:grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+    gap:0px;
+    width:99px;
+}
+.toolbarMain{
+    margin-top:27px;
+    background-color: gray;
+}
+.toolsFrame{
+    padding: 5px;
+    display:flex;
+    -ms-flex-align:   space-between;
+}
+.tool{
+    margin:5px;
+    cursor:pointer;
+}
+.tool:hover{
+    background-color: #CCCCCC;
+}
+.toolFrame{
+    display:flex;
+}
+.toolCategoryFrame{
+    display:flex;
+    flex-direction: row;
+}
