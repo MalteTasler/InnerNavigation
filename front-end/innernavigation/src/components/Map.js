@@ -11,7 +11,7 @@ class Map extends React.Component{
     modeEnum = ["wallTools", "elementTools", "undoRedoTools"]
     constructor(properties) {
         super(properties);
-        this.state = {mode: 0};
+        this.state = {mode: 0, adminMode: properties.adminMode, zoomLevel: 4};
     }
     changeMode = (mode) =>{
         console.log("mode is "+mode)
@@ -19,6 +19,9 @@ class Map extends React.Component{
     }
     modeIs = () => {
         return this.state.mode
+    }
+    zoomIn = () => {
+        if(this.state.zoomLevel != 9)this.setState({zoomLevel: this.state.zoomLevel++})
     }
     render(){
         console.log("render parent "+this.state.mode)
@@ -28,7 +31,7 @@ class Map extends React.Component{
            
             squareObjects.push(<Square mode={this.state.mode} modeIs={() => this.modeIs()} x={x}/>)
         }
-        return <div><Toolbar onModeChange = {(mode) => this.changeMode(mode)}/>
+        return <div>{this.state.adminMode ? <Toolbar onModeChange = {(mode) => this.changeMode(mode)} adminMode = {true}/> : <Toolbar adminMode={false} />}
         <div className ="canvas">
         <div className = "squareCover">{squareObjects}</div>
         </div>

@@ -47,6 +47,9 @@
 .toolbarMain{
     margin-top:27px;
     background-color: gray;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .toolsFrame{
     padding: 5px;
