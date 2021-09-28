@@ -17,18 +17,21 @@ class Toolbar extends React.Component{
         document.querySelectorAll(".tool").forEach((item) => {
             item.style.borderBottom = "";
         })
-        let focus = data.target.id;
-        let above = data.target.parentNode.parentNode.id;
+        let focus = data;
+        let above = document.getElementById(data).parentNode.parentNode.id;
         let mode =modeEnum.indexOf(above);
         this.state.onModeChange(mode)
         document.getElementById(focus).style.borderBottom = "4px solid #5555DD"
         console.log(focus, above, modeEnum.indexOf(above))
 
-        switch(data.target.id)
+        switch(data)
         {
             case 'zoomIn':
                 
         }
+    }
+    componentDidMount() {
+        this.state.adminMode ? this.focus("wallPainter") : "" ;
     }
     render() {
         return  <div className="toolbarMain">
@@ -36,19 +39,19 @@ class Toolbar extends React.Component{
                     ? 
                     <div className="toolsFrame" id = "toolsFrameEdit">
                         <div className="toolCategoryFrame" id="undoRedoToolsFrame">
-                            <div className="toolFrame" id ="levelUp" onClick= {(data) => {this.focus(data)}}></div>
+                            <div className="toolFrame" id ="levelUp" onClick= {(data) => {this.focus(data.target.id)}}></div>
                         </div>
                         <div className="toolCategoryFrame" id="wallToolsFrame">
                             <div className="toolFrame" id="wallPainterFrame">
-                                <div className="tool" id = "wallPainter" onClick = {(data) => {this.focus(data)}}>Build</div>
+                                <div className="tool" id = "wallPainter" onClick = {(data) => {this.focus(data.target.id)}}>Build</div>
                             </div>
                             <div className="toolFrame" id="wallEraserFrame">
-                                <div className="tool" id = "wallEraser" onClick = {(data) => {this.focus(data)}}>Erase</div>
+                                <div className="tool" id = "wallEraser" onClick = {(data) => {this.focus(data.target.id)}}>Erase</div>
                             </div>
                         </div>
                         <div className="toolCategoryFrame" id="elementToolsFrame">
                             <div className="toolFrame" id="wcFrame">
-                                <div className="tool" id = "wc" onClick= {(data) => {this.focus(data)}}>🚾</div>
+                                <div className="tool" id = "wc" onClick= {(data) => {this.focus(data.target.id)}}>🚾</div>
                             </div>
                         </div>
                     </div>
@@ -57,10 +60,10 @@ class Toolbar extends React.Component{
                     <div className="toolsFrame" id = "toolsFrameNavigation">
                         <div className="toolCategoryFrame" id="zoomNavigationFrame">
                             <div className="toolFrame" id= "zoomInFrame">
-                                <div className="tool" id = "zoomIn" onClick = {(data) => {this.focus(data)}}>+</div>
+                                <div className="tool" id = "zoomIn" onClick = {(data) => {this.focus(data.target.id)}}>+</div>
                             </div>
                             <div className="toolFrame" id= "zoomOutFrame">
-                                <div className="tool" id = "zoomOut" onClick = {(data) => {this.focus(data)}}>-</div>
+                                <div className="tool" id = "zoomOut" onClick = {(data) => {this.focus(data.target.id)}}>-</div>
                             </div>
                         </div>
                     </div>

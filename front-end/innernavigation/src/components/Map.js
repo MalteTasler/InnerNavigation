@@ -29,7 +29,7 @@ class Map extends React.Component{
         for(let x = 0; x<36; x++)
         {
            
-            squareObjects.push(<Square mode={this.state.mode} modeIs={() => this.modeIs()} x={x}/>)
+            squareObjects.push(<Square id= {"square"+x} mode={this.state.mode} modeIs={() => this.modeIs()} x={x}/>)
         }
         return <div>{this.state.adminMode ? <Toolbar onModeChange = {(mode) => this.changeMode(mode)} adminMode = {true}/> : <Toolbar adminMode={false} />}
         <div className ="canvas">
