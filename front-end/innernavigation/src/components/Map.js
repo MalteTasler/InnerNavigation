@@ -23,9 +23,10 @@ class Map extends React.Component{
     render(){
         console.log("render parent "+this.state.mode)
         let squareObjects = [];
-        for(let i = 0; i<224; i++)
+        for(let x = 0; x<36; x++)
         {
-            squareObjects.push(<Square mode={this.state.mode} modeIs={() => this.modeIs()}/>)
+           
+            squareObjects.push(<Square mode={this.state.mode} modeIs={() => this.modeIs()} x={x}/>)
         }
         return <div><Toolbar onModeChange = {(mode) => this.changeMode(mode)}/>
         <div className ="canvas">

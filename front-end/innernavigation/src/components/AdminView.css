@@ -19,26 +19,6 @@
 .lineSquare:hover{
     border: solid 2px lightgray;
 }
-.betweenSquare > .leftTop:hover{
-    border-top: solid 2px lightgray;
-    border-left: solid 2px lightgray;
-
-
-}
-.betweenSquare > .rightTop:hover{
-    border-top: solid 2px lightgray;
-    border-right: solid 2px lightgray;
-
-}
-.betweenSquare> .leftBottom:hover{
-    border-bottom: solid 2px lightgray;
-    border-left: solid 2px lightgray;
-}
-.betweenSqaure > .rightBottom:hover{
-    border-right: solid 2px lightgray;
-    border-bottom: solid 2px lightgray;
-
-}
 .square > .leftTop{
     border-right: solid 2px black;
     border-bottom: solid 2px black;
