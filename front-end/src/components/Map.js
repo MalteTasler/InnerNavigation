@@ -8,28 +8,31 @@ import './AdminView.css'
 import Point from './Point.js'
 
 class Map extends React.Component{
-    modeEnum = ["wallTools", "elementTools", "undoRedoTools"]
+    
     constructor(properties) {
         super(properties);
-        this.state = {mode: 0, adminMode: properties.adminMode, zoomLevel: 4};
+        this.state = {horizontalAmount: 27, mode: 3, superMode: 0, adminMode: properties.adminMode, zoomLevel: 4};
+        
     }
     changeMode = (mode) =>{
-        console.log("mode is "+mode)
-        this.setState({mode: mode})
+        var modeEnum = ["undoRedoTool", "undoRedoTool", "wallTools", "wallTools", "elementTools"]
+        var superModeEnum = ["wallTools", "elementTools"]
+        console.log("mode is ",mode)
+        this.setState({mode: mode, superMode: superModeEnum.indexOf(modeEnum[mode])})
+        console.log("render parent ",this.state.mode)
     }
-    modeIs = () => {
-        return this.state.mode
+    superModeIs = () => {
+        return this.state.superMode
     }
     zoomIn = () => {
         if(this.state.zoomLevel != 9)this.setState({zoomLevel: this.state.zoomLevel++})
     }
     render(){
-        console.log("render parent "+this.state.mode)
+        console.log("render parent ",this.state.mode)
         let squareObjects = [];
-        for(let x = 0; x<36; x++)
+        for(let x = 0; x<486; x++)
         {
-           
-            squareObjects.push(<Square id= {"square"+x} mode={this.state.mode} modeIs={() => this.modeIs()} x={x}/>)
+            squareObjects.push(<Square key= {"square"+x} mode={this.state.mode} superMode={ this.state.superMode} adminMode={this.state.adminMode} modeIs={() => this.superModeIs()} horizontalAmount = {this.state.horizontalAmount} x={x}/>)
         }
         return <div>{this.state.adminMode ? <Toolbar onModeChange = {(mode) => this.changeMode(mode)} adminMode = {true}/> : <Toolbar adminMode={false} />}
         <div className ="canvas">

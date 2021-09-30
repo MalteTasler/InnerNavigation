@@ -1,5 +1,8 @@
 .canvas{
     margin-top:24px;
+    overflow: auto;
+    max-height: 454px;
+    position:sticky;
 }
 .main{
     display:flex;
@@ -8,16 +11,19 @@
 .settingsLevelFrame{
     padding: 24px;
 }
+.settingsViewingPointsFrame{
+    padding: 27px;
+}
 .square{
     width: 29px;
     height:29px;
     background-color:yellow;
     display:grid;
-    cursor:pointer;
     grid-template-columns: auto auto;
 }
 .lineSquare:hover{
     border: solid 2px lightgray;
+    cursor:pointer;
 }
 .square > .leftTop{
     border-right: solid 2px black;
@@ -40,12 +46,13 @@
 }
 .squareCover{
     display:grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
     gap:0px;
-    width:99px;
+
 }
 .toolbarMain{
     margin-top:27px;
+    height: 45px;
     background-color: gray;
     display:flex;
     flex-direction: row;

@@ -6,6 +6,7 @@ import Toolbar from "./Toolbar.js";
 import Square from './Square.js'
 import './AdminView.css'
 import Point from './Point.js'
+let string_local_settings_viewingPoints = "Erlebnis-Punkte"
 let string_local_settings = "Einstellungen"
 let string_local_settings_level = "Etagen"
 let gotData = [[{positionX:4, positionY:3, name:'One'},{positionX:4, positionY:3, name:'One'}], [{positionX:4, positionY:3, name:'One'},{positionX:4, positionY:3, name:'One'}]]
@@ -90,7 +91,12 @@ class AdminView extends React.Component{
                                 <AmountControl buttonText="Text" showInput={true}/>
                             </div>
                         </Accordion>
-                    </Accordion>
+                        <Accordion head={string_local_settings_viewingPoints}>
+                            <div className="settingsViewingPointsFrame">
+                                Erlebnis-Punkte kannst Du über die Toolbar hinzufügen.
+                            </div>
+                        </Accordion>
+                    </Accordion >
                     <Map adminMode = {true}/> 
                 </div>
     }
