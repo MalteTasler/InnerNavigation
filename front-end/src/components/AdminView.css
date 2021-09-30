@@ -4,6 +4,22 @@
     max-height: 454px;
     position:sticky;
 }
+.levelDisplayFrame{
+    position:relative;
+    /*height: 27px;
+    top: 24%;
+    left: 83%;*/
+    bottom: 441px;
+    left: 84%;
+    width: 76px;
+    display:flex;
+    padding:4px;
+    background-color: lightgray;
+    opacity: 0.9;
+    border-radius: 4px;
+    box-shadow: -3px 3px #555;
+    color: black;
+}
 .main{
     display:flex;
     flex-direction: column;

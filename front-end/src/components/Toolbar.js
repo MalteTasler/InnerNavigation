@@ -9,7 +9,7 @@ class Toolbar extends React.Component{
     constructor(properties)
     {
         super(properties)
-        this.state = {onModeChange: properties.onModeChange, adminMode: properties.adminMode}
+        this.state = {onModeChange: properties.onModeChange, onLevelChange: properties.onLevelChange, adminMode: properties.adminMode}
     }
     focus = (data) => {
         let modeEnum = ["undo", "redo", "wallPainter", "wallEraser", "wc", "zoomIn", "zoomOut", "levelUp", "levelDown"]
@@ -27,7 +27,20 @@ class Toolbar extends React.Component{
         switch(data)
         {
             case 'zoomIn':
+                break;
+            case 'zoomOut' :
+                console.log("zoom out")
+                break;
+            case 'levelUp' :
+                this.state.onLevelChange("plus")
+                break;
+            case 'levelDown' :
                 
+                break;
+            case 'undo' :
+                break;
+            case 'redo' :
+                break;
         }
     }
     componentDidMount() {
