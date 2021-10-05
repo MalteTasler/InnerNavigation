@@ -35,11 +35,15 @@ class Toolbar extends React.Component{
                 this.state.onLevelChange("plus")
                 break;
             case 'levelDown' :
-                
+                this.state.onLevelChange("minus")
                 break;
             case 'undo' :
                 break;
             case 'redo' :
+                break;
+            case 'wallPainter':
+                break;
+            case 'wallEraser':
                 break;
         }
     }

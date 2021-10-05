@@ -10,7 +10,10 @@ import Point from './Point.js'
 const App = () => {
     
     if (chayns.env.user.adminMode)
+    {
+        console.log("start ", chayns.env.site)
         return <AdminView />
+    }
     else
         return <UserView />
     

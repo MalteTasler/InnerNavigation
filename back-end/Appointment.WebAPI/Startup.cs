@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
-using serverView.WebAPI.Helper;
-using serverView.WebAPI.Interfaces;
-using serverView.WebAPI.Models;
-using serverView.WebAPI.Repositories;
+using innerNavigation.WebAPI.Helper;
+using innerNavigation.WebAPI.Interfaces;
+using innerNavigation.WebAPI.Models;
+using innerNavigation.WebAPI.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -17,7 +17,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace serverView.WebAPI
+namespace innerNavigation.WebAPI
 {
     public class Startup
     {
@@ -34,12 +34,7 @@ namespace serverView.WebAPI
         {
             Console.WriteLine("initializing");
             services.Configure<DBSetting>(Configuration.GetSection("DBSettings"));
-            services.AddScoped<IServerRepository, ServerRepository>();
-            services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<ILocationRepository, LocationRepository>();
-            services.AddScoped<INetworkRepository, NetworkRepository>();
-            services.AddScoped<IServiceRepository, ServiceRepository>();
-            services.AddScoped<ICustomLinkRepository, CustomLinkRepository>();
             services.AddSingleton<IDBContext, DBContext>();
             services.AddControllers(setupAction =>
             {

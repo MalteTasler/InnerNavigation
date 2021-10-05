@@ -7,13 +7,13 @@ using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using serverView.WebAPI.Interfaces;
-using serverView.WebAPI.Models;
+using innerNavigation.WebAPI.Interfaces;
+using innerNavigation.WebAPI.Models;
 using Dapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Logging;
 
-namespace serverView.WebAPI.Repositories
+namespace innerNavigation.WebAPI.Repositories
 {
     public class LocationRepository : ILocationRepository
     {

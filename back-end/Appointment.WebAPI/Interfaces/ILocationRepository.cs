@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using serverView.WebAPI.Models;
+using innerNavigation.WebAPI.Models;
 
-namespace serverView.WebAPI.Interfaces
+namespace innerNavigation.WebAPI.Interfaces
 {
     public interface ILocationRepository
     {

@@ -2,7 +2,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace serverView.WebAPI.Models
+namespace innerNavigation.WebAPI.Models
 {
     public class RoomDTO
     {
