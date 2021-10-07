@@ -10,7 +10,7 @@ class Square extends React.Component{
                         adminMode:properties.adminMode,
                         icons: [null, null, 'I', '🗑', '🚾'],
                         isHovered: false,
-                        wallDrawn: 0, // 0 no wall, 1 horicontally wall, 2 vertically wall, 3 vertically and horicontally
+                        wallDrawn: properties.wallDrawn, // 0 no wall, 1 horicontally wall, 2 vertically wall, 3 vertically and horicontally
                         x:properties.x, 
                         y:properties.y,
                         hoveredSquare: properties.hoveredSquare,
@@ -111,7 +111,7 @@ class Square extends React.Component{
 
     }
     render () {
-        //console.log("render boxes" + this.state.superModeIs(), this.state.mode)
+        //console.log("render boxes" + this.state.superModeIs(), this.state.mode, this.state.wallDrawn)
         if(this.state.superModeIs() == 0)
         {
             let classes = "square"
@@ -130,6 +130,9 @@ class Square extends React.Component{
                         leftTop+= " leftTopWallHoricontally"
                         rightTop+= " rightTopWallHoricontally"
                         break;
+                    case 2:
+                        leftTop += " leftTopWallVertically"
+                        leftBottom += " leftBottomWallVertically"
                 }
 
 

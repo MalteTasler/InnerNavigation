@@ -97,7 +97,7 @@ class AdminView extends React.Component{
                             </div>
                         </Accordion>
                     </Accordion >
-                    <Map adminMode = {true}/> 
+                    <Map adminMode = {true} horizontalAmount={27} verticalAmount={18}/> 
                 </div>
     }
 }

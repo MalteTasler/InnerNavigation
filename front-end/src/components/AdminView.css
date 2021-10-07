@@ -68,6 +68,14 @@
     border-bottom: solid 2px darkblue;
 
 }
+.square > .leftTopWallVertically{
+    border-right: solid 5px red;
+
+}
+.square > .leftBottomWallVertically{
+    border-right: solid 5px red;
+
+}
 .squareCover{
     display:grid;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;

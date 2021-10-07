@@ -11,14 +11,20 @@ class Map extends React.Component{
     
     constructor(properties) {
         super(properties);
-        this.state = {  horizontalAmount: 27, 
+        let table = [];
+        for(let i= 0; i< properties.horizontalAmount * properties.verticalAmount; i++)
+        {
+            table.push(0); // 0 no wall, 1 horicontally wall, 2 vertically wall, 3 vertically and horicontally}
+        }
+        this.state = {  horizontalAmount: properties.horizontalAmount, 
                         mode: 3, superMode: 0, 
                         adminMode: properties.adminMode, 
                         zoomLevel: 4, 
                         levelArray: [-1, 0, 1], 
                         level : 0,
                         isClickedTool:false,
-                        clickedTool: {mode: 0, location:""} // 0 no action 1 clicked first time 2 hovered first time after click making it horicontylly 3 vertically
+                        clickedTool: {mode: 0, location:""}, // 0 no action 1 clicked first time 2 hovered first time after click making it horicontylly 3 vertically 4 hovered next time
+                        table: table
                     };
         
         
@@ -27,9 +33,9 @@ class Map extends React.Component{
     changeMode = (mode) =>{
         var modeEnum = ["undoRedoTool", "undoRedoTool", "wallTools", "wallTools", "elementTools"]
         var superModeEnum = ["wallTools", "elementTools"]
-        console.log("mode is ",mode)
+        //console.log("mode is ",mode)
         this.setState({mode: mode, superMode: superModeEnum.indexOf(modeEnum[mode])})
-        console.log("render parent ",this.state.mode)
+        //console.log("render parent ",this.state.mode)
     }
 
     superModeIs = () => {
@@ -79,21 +85,30 @@ class Map extends React.Component{
 
     hoveredSquare = (data, key) => {
         console.log("hovering", this.state.clickedTool.mode)
+        
         if(this.state.clickedTool.mode == 1)
         {
+            let theState = Object.assign({}, this.state.table)
             let location = parseInt(key.split('_')[1])
             let y = Math.floor(location / this.state.horizontalAmount);
             let x = location % this.state.horizontalAmount;
-            console.log("hovered", x, y)
+            console.log("hovered", x, y, this.state.clickedTool)
             if(this.state.clickedTool.location.x == x && this.state.clickedTool.location.y == y)
             {
 
             }
-            else if(this.state.clickedTool.location.x == x) // horicontally
+            else if(this.state.clickedTool.location.x == x) // vertically
             {
-                
+                console.log("vertically", this.state.clickedTool.location.y, y, (y-this.state.clickedTool.location.y), Math.pow((y-this.state.clickedTool.location.y), 2), Math.sqrt(Math.pow((y-this.state.clickedTool.location.y), 2), 2) )
+                let lead = this.state.clickedTool.location.y;
+                for(let i = 0; i< (Math.sqrt(Math.pow((y-this.state.clickedTool.location.y), 2), 2)); i++)
+                {
+                    console.log((lead * this.state.horizontalAmount), lead, this.state.clickedTool.location.x)
+                    theState[(lead*this.state.horizontalAmount+this.state.clickedTool.location.x)] = 2
+                    lead = lead+((y-this.state.clickedTool.location.y) / (Math.sqrt(Math.pow((y-this.state.clickedTool.location.y), 2), 2)))
+                }
             }
-            else if(this.state.clickedTool.location.y == y) // vertically
+            else if(this.state.clickedTool.location.y == y) // horicontally
             {
 
             }
@@ -101,12 +116,14 @@ class Map extends React.Component{
             {
 
             }
+            //console.log("switch ", theState)
+            this.setState({table: theState})
 
         }
     }
 
     shouldComponentUpdate(nextProps, nextState) { 
-        console.log("next ", nextProps, nextState)
+        //console.log("next ", nextProps, nextState)
         if('clickedTool' in nextProps)
         {
             //console.log("clicked Tool ",nextProps.clickedTool)
@@ -119,7 +136,7 @@ class Map extends React.Component{
 
     render(){
         //if(allowRender){
-            console.log("render parent ",this.state.mode, chayns.env.site.colorScheme)
+            //console.log("render parent ",this.state.mode)
             let squareObjects = [];
             for(let x = 0; x<486; x++)
             {
@@ -133,7 +150,9 @@ class Map extends React.Component{
                                             clickedSquare = {(data, id) => {this.clickedSquare(data, id)}}
                                             hoveredSquare = {(data, id) => {this.hoveredSquare(data, id)}}
                                             changeClickedTool = {() => {this.changeClickedTool()}}
-                                            horizontalAmount = {this.state.horizontalAmount} x={x}/>)
+                                            horizontalAmount = {this.state.horizontalAmount} x={x}
+                                            wallDrawn = {this.state.table[x]}
+                                    />)
             }
             return <div>{this.state.adminMode ? <Toolbar onModeChange = {(mode) => this.changeMode(mode)} adminMode = {true} onLevelChange = {(level) => this.changeLevel(level)}/> : <Toolbar adminMode={false} onLevelChange={(level) => this.changeLevel(level)}/>}
             
