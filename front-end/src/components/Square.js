@@ -111,6 +111,7 @@ class Square extends React.Component{
 
     }
     render () {
+        //return("test")
         //console.log("render boxes" + this.state.superModeIs(), this.state.mode, this.state.wallDrawn)
         if(this.state.superModeIs() == 0)
         {

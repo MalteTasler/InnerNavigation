@@ -6,6 +6,16 @@ import Toolbar from "./Toolbar.js";
 import Square from './Square.js'
 import './AdminView.css'
 import Point from './Point.js'
+import ImageAccordion from "chayns-components/dist/cjs/react-chayns-image_accordion/component/ImageAccordion";
+import List from "chayns-components/dist/cjs/react-chayns-list/component/List";
+import ListItem from "chayns-components/dist/cjs/react-chayns-list/component/ListItem";
+import RfidInput from "chayns-components/dist/cjs/react-chayns-rfid_input/component/RfidInput";
+import SetupWizard from "chayns-components/dist/cjs/react-chayns-setupwizard/component/SetupWizard";
+import { SetupWizardItem } from "chayns-components";
+import Signature from "chayns-components/dist/cjs/react-chayns-signature/component/Signature";
+import SliderButton from "chayns-components/dist/cjs/react-chayns-sliderbutton/component/SliderButton";
+import VerificationIcon from "chayns-components/dist/cjs/react-chayns-verification_icon/component/VerificationIcon";
+import ContextMenu from "chayns-components/dist/cjs/react-chayns-contextmenu/component/ContextMenu";
 let string_local_settings_viewingPoints = "Erlebnis-Punkte"
 let string_local_settings = "Einstellungen"
 let string_local_settings_level = "Etagen"
@@ -98,6 +108,21 @@ class AdminView extends React.Component{
                         </Accordion>
                     </Accordion >
                     <Map adminMode = {true} horizontalAmount={27} verticalAmount={18}/> 
+                    <ImageAccordion />
+                    <List>
+                        <ListItem title = {"Identification"}/>
+                        <ListItem title = {"Identification"}/>
+                        <ListItem title = {"Identification"}/>
+                    </List>
+                    <RfidInput value = {"Letter"} onInput = {() => {}} onConfirm = {() => {}}/>
+                    {/*<SetupWizard>
+                        <SetupWizardItem step = {1} title={"One"}></SetupWizardItem>
+                        <SetupWizardItem step = {2} title={"Two"}></SetupWizardItem>
+                    </SetupWizard>*/}
+                    <Signature />
+                    <ContextMenu itms ={[{className: "string", onClick:{}, text: "next", stringName: "class", icon: "image"},{className: "string", onClick:{}, text: "next", stringName: "class", icon: "image"}]} />
+                    <SliderButton />
+                    <VerificationIcon name = {"table"}/> 
                 </div>
     }
 }
