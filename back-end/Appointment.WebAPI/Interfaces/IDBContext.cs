@@ -1,7 +1,7 @@
-using System.Data;
+﻿using System.Data;
 using System.Threading.Tasks;
 
-namespace serverView.WebAPI.Interfaces
+namespace innerNavigation.WebAPI.Interfaces
 {
     public interface IDBContext
     {

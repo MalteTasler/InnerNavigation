@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   "dgSpecHash": "1yAN7+k9Ejy7I0WNJ6iLMLyHPT8gxN9N/BeS1mc3X0Z6HB0HEWUNXvQXZC+yWHF+3Xi/QJXUCBaX65lxEJ5qMA==",
   "success": true,
@@ -15,6 +16,11 @@
   "projectFilePath": "C:\\Users\\MTasler\\OneDrive\\developm\\InnerNavigation\\InnerNavigation\\back-end\\serverViewDotNetCore5.WebAPI\\serverViewDotNetCore5.WebAPI.csproj",
 >>>>>>> main
 >>>>>>> Stashed changes
+=======
+  "dgSpecHash": "Z6f39iy7QCU02mb1O511Czi9fJ3E8Ddd4LHkkHJaVMUW+3lFL3N7bkKnn8Ce9Zd21Eg/ZOy7OwSWbzOXMjP7iA==",
+  "success": true,
+  "projectFilePath": "C:\\dev\\InnerNavigator\\back-end\\serverViewDotNetCore5.WebAPI\\serverViewDotNetCore5.WebAPI.csproj",
+>>>>>>> develop
   "expectedPackageFiles": [
     "C:\\Users\\MTasler\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\MTasler\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

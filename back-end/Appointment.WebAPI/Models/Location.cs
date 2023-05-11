@@ -1,5 +1,5 @@
 ﻿using System;
-namespace serverView.WebAPI.Models
+namespace innerNavigation.WebAPI.Models
 {
     public class Location : LocationDTO
     {

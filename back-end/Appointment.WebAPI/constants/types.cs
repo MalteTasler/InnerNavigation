@@ -1,4 +1,4 @@
-namespace serverView.WebAPI.constants
+namespace innerNavigation.WebAPI.constants
 {
     public enum View
     {

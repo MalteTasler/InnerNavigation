@@ -3,13 +3,13 @@ using System.Data.SqlClient;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Options;
 using System;
-using serverView.WebAPI.Interfaces;
-using serverView.WebAPI.Models;
+using innerNavigation.WebAPI.Interfaces;
+using innerNavigation.WebAPI.Models;
 using Microsoft.EntityFrameworkCore;
 //using Microsoft.EntityFrameworkCore;
 
 
-namespace serverView.WebAPI.Helper
+namespace innerNavigation.WebAPI.Helper
 {
     public class DBContext : IDBContext
     {
@@ -20,7 +20,6 @@ namespace serverView.WebAPI.Helper
         {
             _dbSettings = dbSettings.Value;
         }
-        public DbSet<Models.Server> Server { get; set; }
         public async Task<IDbConnection> GetDBContext()
         {
             try

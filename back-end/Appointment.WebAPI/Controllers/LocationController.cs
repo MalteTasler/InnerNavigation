@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using serverView.WebAPI.Models;
+using innerNavigation.WebAPI.Models;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using serverView.WebAPI.Interfaces;
+using innerNavigation.WebAPI.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.WebUtilities;
 using Newtonsoft.Json;
 
-namespace serverView.WebAPI.Controllers
+namespace innerNavigation.WebAPI.Controllers
 {
     [Route("locations")]
     public class LocationController : ControllerBase

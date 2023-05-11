@@ -1,0 +1,36 @@
+{
+    "name": "innernavigation",
+    "version": "1.0.0",
+    "private": true,
+    "description": "A map that helps visitors to orientate within a building complex",
+    "keywords": [
+        "chayns",
+        "chayns-toolkit",
+        "react"
+    ],
+    "scripts": {
+        "build": "chayns-toolkit build",
+        "dev": "chayns-toolkit dev",
+        "format": "prettier . --write",
+        "lint": "chayns-toolkit lint"
+    },
+    "prettier": {
+        "proseWrap": "always",
+        "singleQuote": true,
+        "tabWidth": 4
+    },
+    "eslintConfig": {
+        "extends": "@chayns-toolkit"
+    },
+    "dependencies": {
+        "chayns-components": "^4.21.12",
+        "prop-types": "^15.7.2",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    },
+    "devDependencies": {
+        "chayns-toolkit": "^1.6.3",
+        "prettier": "^2.3.0",
+        "prettier-plugin-packagejson": "^2.2.11"
+    }
+}
