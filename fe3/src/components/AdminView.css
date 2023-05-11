@@ -1,0 +1,111 @@
+.canvas{
+    margin-top:24px;
+    overflow: auto;
+    max-height: 454px;
+    position:sticky;
+}
+.levelDisplayFrame{
+    position:relative;
+    /*height: 27px;
+    top: 24%;
+    left: 83%;*/
+    bottom: 441px;
+    left: 84%;
+    width: 76px;
+    display:flex;
+    padding:4px;
+    background-color: lightgray;
+    opacity: 0.9;
+    border-radius: 4px;
+    box-shadow: -3px 3px #555;
+    color: black;
+}
+.main{
+    display:flex;
+    flex-direction: column;
+}
+.settingsLevelFrame{
+    padding: 24px;
+}
+.settingsViewingPointsFrame{
+    padding: 27px;
+}
+.square{
+    width: 29px;
+    height:29px;
+    background-color:yellow;
+    display:grid;
+    grid-template-columns: auto auto;
+}
+.lineSquare:hover{
+    border: solid 2px lightgray;
+    cursor:pointer;
+}
+.square > .leftTop{
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+
+
+}
+.square > .rightTop{
+    border-bottom: solid 2px black;
+
+}
+.square> .leftBottom{
+    border-right: solid 2px black;
+
+}
+.sqaure > .rightBottom{
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+
+}
+.square > .leftTopWallHoricontally{
+    border-bottom: solid 2px darkblue;
+
+}
+.square > .rightTopWallHoricontally{
+    border-bottom: solid 2px darkblue;
+
+}
+.square > .leftTopWallVertically{
+    border-right: solid 5px red;
+
+}
+.square > .leftBottomWallVertically{
+    border-right: solid 5px red;
+
+}
+.squareCover{
+    display:grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    gap:0px;
+
+}
+.toolbarMain{
+    margin-top:27px;
+    height: 45px;
+    background-color: gray;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.toolsFrame{
+    padding: 5px;
+    display:flex;
+    -ms-flex-align:   space-between;
+}
+.tool{
+    margin:5px;
+    cursor:pointer;
+}
+.tool:hover{
+    background-color: #CCCCCC;
+}
+.toolFrame{
+    display:flex;
+}
+.toolCategoryFrame{
+    display:flex;
+    flex-direction: row;
+}
