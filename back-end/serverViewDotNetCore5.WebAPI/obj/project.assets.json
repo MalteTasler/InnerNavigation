@@ -16,6 +16,7 @@
       "Microsoft.OpenApi/1.2.3": {
         "type": "package",
         "compile": {
+<<<<<<< Updated upstream
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
             "related": ".pdb;.xml"
           }
@@ -24,6 +25,23 @@
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
             "related": ".pdb;.xml"
           }
+=======
+<<<<<<< HEAD
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
+=======
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "related": ".pdb;.xml"
+          }
+>>>>>>> main
+>>>>>>> Stashed changes
         }
       },
       "Swashbuckle.AspNetCore/5.6.3": {
@@ -44,6 +62,7 @@
           "Microsoft.OpenApi": "1.2.3"
         },
         "compile": {
+<<<<<<< Updated upstream
           "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.dll": {
             "related": ".pdb;.xml"
           }
@@ -52,6 +71,23 @@
           "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.dll": {
             "related": ".pdb;.xml"
           }
+=======
+<<<<<<< HEAD
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.dll": {}
+=======
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.dll": {
+            "related": ".pdb;.xml"
+          }
+>>>>>>> main
+>>>>>>> Stashed changes
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
@@ -63,6 +99,7 @@
           "Swashbuckle.AspNetCore.Swagger": "5.6.3"
         },
         "compile": {
+<<<<<<< Updated upstream
           "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
             "related": ".pdb;.xml"
           }
@@ -71,6 +108,23 @@
           "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
             "related": ".pdb;.xml"
           }
+=======
+<<<<<<< HEAD
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
+=======
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+            "related": ".pdb;.xml"
+          }
+>>>>>>> main
+>>>>>>> Stashed changes
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
@@ -79,6 +133,7 @@
       "Swashbuckle.AspNetCore.SwaggerUI/5.6.3": {
         "type": "package",
         "compile": {
+<<<<<<< Updated upstream
           "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
             "related": ".pdb;.xml"
           }
@@ -87,6 +142,23 @@
           "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
             "related": ".pdb;.xml"
           }
+=======
+<<<<<<< HEAD
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
+=======
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
+            "related": ".pdb;.xml"
+          }
+>>>>>>> main
+>>>>>>> Stashed changes
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
@@ -215,11 +287,27 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< Updated upstream
+      "projectUniqueName": "C:\\Users\\MTasler\\OneDrive\\developm\\InnerNavigation\\InnerNavigation\\back-end\\serverViewDotNetCore5.WebAPI\\serverViewDotNetCore5.WebAPI.csproj",
+=======
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\dev\\InnerNavigator\\back-end\\serverViewDotNetCore5.WebAPI\\serverViewDotNetCore5.WebAPI.csproj",
+>>>>>>> Stashed changes
+      "projectName": "serverViewDotNetCore5.WebAPI",
+      "projectPath": "C:\\Users\\MTasler\\OneDrive\\developm\\InnerNavigation\\InnerNavigation\\back-end\\serverViewDotNetCore5.WebAPI\\serverViewDotNetCore5.WebAPI.csproj",
+      "packagesPath": "C:\\Users\\MTasler\\.nuget\\packages\\",
+<<<<<<< Updated upstream
+      "outputPath": "C:\\Users\\MTasler\\OneDrive\\developm\\InnerNavigation\\InnerNavigation\\back-end\\serverViewDotNetCore5.WebAPI\\obj\\",
+=======
+      "outputPath": "C:\\dev\\InnerNavigator\\back-end\\serverViewDotNetCore5.WebAPI\\obj\\",
+=======
       "projectUniqueName": "C:\\Users\\MTasler\\OneDrive\\developm\\InnerNavigation\\InnerNavigation\\back-end\\serverViewDotNetCore5.WebAPI\\serverViewDotNetCore5.WebAPI.csproj",
       "projectName": "serverViewDotNetCore5.WebAPI",
       "projectPath": "C:\\Users\\MTasler\\OneDrive\\developm\\InnerNavigation\\InnerNavigation\\back-end\\serverViewDotNetCore5.WebAPI\\serverViewDotNetCore5.WebAPI.csproj",
       "packagesPath": "C:\\Users\\MTasler\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\MTasler\\OneDrive\\developm\\InnerNavigation\\InnerNavigation\\back-end\\serverViewDotNetCore5.WebAPI\\obj\\",
+>>>>>>> main
+>>>>>>> Stashed changes
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -263,8 +351,17 @@
           "net47",
           "net471",
           "net472",
+<<<<<<< Updated upstream
           "net48",
           "net481"
+=======
+<<<<<<< HEAD
+          "net48"
+=======
+          "net48",
+          "net481"
+>>>>>>> main
+>>>>>>> Stashed changes
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -276,7 +373,15 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< Updated upstream
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+=======
+<<<<<<< HEAD
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+>>>>>>> main
+>>>>>>> Stashed changes
       }
     }
   }
