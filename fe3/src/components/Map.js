@@ -1,14 +1,10 @@
 import React from "react";
-import {Accordion, Input, AmountControl} from 'chayns-components'
 import {Fetch} from '../actions/fetch.js';
 import Square from './Square.js'
 import Toolbar from "./Toolbar.js";
-import AdminView from './AdminView.js'
 import './AdminView.css'
-import Point from './Point.js'
 
 class Map extends React.Component{
-    
     constructor(properties) {
         super(properties);
         let table = [];
@@ -26,26 +22,20 @@ class Map extends React.Component{
                         clickedTool: {mode: 0, location:""}, // 0 no action 1 clicked first time 2 hovered first time after click making it horicontylly 3 vertically 4 hovered next time
                         table: table
                     };
-        
-        
     }
-
-    changeMode = (mode) =>{
+    changeMode = (mode) => {
         var modeEnum = ["undoRedoTool", "undoRedoTool", "wallTools", "wallTools", "elementTools"]
         var superModeEnum = ["wallTools", "elementTools"]
         //console.log("mode is ",mode)
         this.setState({mode: mode, superMode: superModeEnum.indexOf(modeEnum[mode])})
         //console.log("render parent ",this.state.mode)
     }
-
     superModeIs = () => {
         return this.state.superMode
     }
-
     zoomIn = () => {
         if(this.state.zoomLevel != 9)this.setState({zoomLevel: this.state.zoomLevel++})
     }
-
     changeLevel = (level) => {
         if(level == "plus")
         {
@@ -61,11 +51,9 @@ class Map extends React.Component{
             }
         }
     }
-
     changeClickedTool = (data) => { //clicked with tool on the canvas
         //this.setState({clickedTool: data})
     }
-
     clickedSquare = (data, key) => {
         console.log("clicking",data.target.parentNode, this.state.clickedTool)
         let location = parseInt(key.split('_')[1])
@@ -73,19 +61,15 @@ class Map extends React.Component{
         let x = location % this.state.horizontalAmount;
         if(this.state.clickedTool.mode == 0)
         {
-            this.setState({clickedTool: {mode: 1, location: {x: x, y:y}}})
-            
+            this.setState({clickedTool: {mode: 1, location: {x: x, y:y}}})   
         }
         else if(this.state.clickedTool.mode == 1)
         {
             this.setState({clickedTool:{mode : 0, location: {}}})
-        }
-        
+        } 
     }
-
     hoveredSquare = (data, key) => {
-        console.log("hovering", this.state.clickedTool.mode)
-        
+        console.log("hovering", this.state.clickedTool.mode)   
         if(this.state.clickedTool.mode == 1)
         {
             let theState = Object.assign({}, this.state.table)
@@ -118,7 +102,6 @@ class Map extends React.Component{
             }
             //console.log("switch ", theState)
             this.setState({table: theState})
-
         }
     }
 
@@ -134,7 +117,7 @@ class Map extends React.Component{
         return true
     }
 
-    render(){
+    render() {
         //if(allowRender){
             //console.log("render parent ",this.state.mode)
             let squareObjects = [];
@@ -154,17 +137,25 @@ class Map extends React.Component{
                                             wallDrawn = {this.state.table[x]}
                                     />)
             }
-            return <div>{this.state.adminMode ? <Toolbar onModeChange = {(mode) => this.changeMode(mode)} adminMode = {true} onLevelChange = {(level) => this.changeLevel(level)}/> : <Toolbar adminMode={false} onLevelChange={(level) => this.changeLevel(level)}/>}
+            return (
+                <div>
+                    {this.state.adminMode
+                        ?
+                            <Toolbar onModeChange = {(mode) => this.changeMode(mode)} adminMode = {true} onLevelChange = {(level) => this.changeLevel(level)}/>
+                        :
+                            <Toolbar adminMode={false} onLevelChange={(level) => this.changeLevel(level)}/>
+                    }
             
-            <div className ="canvas">
-                <div className = "squareCover">{squareObjects}</div>
-            </div>
-            <div className="levelDisplayFrame">
-                <div className="levelDisplay">
-                    Etage: {this.state.level}
+                    <div className ="canvas">
+                        <div className = "squareCover">{squareObjects}</div>
+                    </div>
+                    <div className="levelDisplayFrame">
+                        <div className="levelDisplay">
+                            Etage: {this.state.level}
+                        </div>
+                    </div>
                 </div>
-            </div>
-            </div>
+            )
         //}
     }
 }

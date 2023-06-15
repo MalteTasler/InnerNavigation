@@ -1,9 +1,6 @@
 import React from "react";
 import {Fetch} from '../actions/fetch.js';
-import Square from './Square.js'
 import './AdminView.css'
-import Point from './Point.js'
-import Map from './Map.js'
 
 class Toolbar extends React.Component{
     constructor(properties)
@@ -54,30 +51,31 @@ class Toolbar extends React.Component{
         return  <div className="toolbarMain">
                     {this.state.adminMode 
                     ? 
-                    <div className="toolsFrame" id = "toolsFrameEdit">
-                        <div className="toolCategoryFrame" id="undoRedoToolsFrame">
-                            <div className="toolFrame" id ="undoFrame">
-                                <div className="tool clicker" id="undo" onClick= {(data) => {this.focus(data.target.id)}}>↩</div>
+                        <div className="toolsFrame" id = "toolsFrameEdit">
+                            <div className="toolCategoryFrame" id="undoRedoToolsFrame">
+                                <div className="toolFrame" id ="undoFrame">
+                                    <div className="tool clicker" id="undo" onClick= {(data) => {this.focus(data.target.id)}}>↩</div>
+                                </div>
+                                <div className="toolFrame" id ="redoFrame">
+                                    <div className="tool clicker" id="redo" onClick= {(data) => {this.focus(data.target.id)}}>-</div>
+                                </div>
                             </div>
-                            <div className="toolFrame" id ="redoFrame">
-                                <div className="tool clicker" id="redo" onClick= {(data) => {this.focus(data.target.id)}}>-</div>
+                            <div className="toolCategoryFrame" id="wallToolsFrame">
+                                <div className="toolFrame" id="wallPainterFrame">
+                                    <div className="tool put" id = "wallPainter" onClick = {(data) => {this.focus(data.target.id)}}>Build</div>
+                                </div>
+                                <div className="toolFrame" id="wallEraserFrame">
+                                    <div className="tool put" id = "wallEraser" onClick = {(data) => {this.focus(data.target.id)}}>Erase</div>
+                                </div>
+                            </div>
+                            <div className="toolCategoryFrame" id="elementToolsFrame">
+                                <div className="toolFrame" id="wcFrame">
+                                    <div className="tool put" id = "wc" onClick= {(data) => {this.focus(data.target.id)}}>🚾</div>
+                                </div>
                             </div>
                         </div>
-                        <div className="toolCategoryFrame" id="wallToolsFrame">
-                            <div className="toolFrame" id="wallPainterFrame">
-                                <div className="tool put" id = "wallPainter" onClick = {(data) => {this.focus(data.target.id)}}>Build</div>
-                            </div>
-                            <div className="toolFrame" id="wallEraserFrame">
-                                <div className="tool put" id = "wallEraser" onClick = {(data) => {this.focus(data.target.id)}}>Erase</div>
-                            </div>
-                        </div>
-                        <div className="toolCategoryFrame" id="elementToolsFrame">
-                            <div className="toolFrame" id="wcFrame">
-                                <div className="tool put" id = "wc" onClick= {(data) => {this.focus(data.target.id)}}>🚾</div>
-                            </div>
-                        </div>
-                    </div>
-                    :<div></div>
+                    :
+                        <div></div>
                     }
                     <div className="toolsFrame" id = "toolsFrameNavigation">
                         <div className="toolCategoryFrame" id="zoomNavigationFrame">
@@ -90,9 +88,7 @@ class Toolbar extends React.Component{
                         </div>
                         <div className="toolCategoryFrame" id="levelNavigationFrame">
                             <div className="toolFrame" id="levelUpFrame">
-                            
                                 <div className="tool clicker" id="levelUp" onClick= {(data) => {this.focus(data.target.id)}}>˄</div>
-                            
                             </div>
                             <div className="toolFrame" id="levelDownFrame">
                                 <div className="tool clicker" id="levelDown" onClick = {(data) => {this.focus(data.target.id)}}>˅</div>

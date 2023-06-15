@@ -8,8 +8,7 @@ class Point extends React.Component{
         this.yCenter = y;
         let innerHTML = ('<div id ="serverPoint_'+counter+'" class="serverPoint" style="position:relative; left:'+this.xCenter+'px; bottom:'+this.yCenter+'px;" /><span class="tooltip">'+name+'<br />x: <span style="text-size:3px;">'+this.xCenter+'</span><br />y: <span style="text-size"3px;">'+this.yCenter+'</span></span>')
         this.DOM = document.getElementById(('serverPoint_'+counter));
-        //console.log(this.DOM)
-        
+        //console.log(this.DOM) 
     }
     hasCoordinates(x,y)
     {

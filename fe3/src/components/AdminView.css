@@ -4,11 +4,11 @@
     max-height: 454px;
     position:sticky;
 }
+.levelDisplay{
+    user-select: none;
+}
 .levelDisplayFrame{
     position:relative;
-    /*height: 27px;
-    top: 24%;
-    left: 83%;*/
     bottom: 441px;
     left: 84%;
     width: 76px;
@@ -44,43 +44,33 @@
 .square > .leftTop{
     border-right: solid 2px black;
     border-bottom: solid 2px black;
-
-
 }
 .square > .rightTop{
     border-bottom: solid 2px black;
-
 }
 .square> .leftBottom{
     border-right: solid 2px black;
-
 }
 .sqaure > .rightBottom{
     border-right: solid 2px black;
     border-bottom: solid 2px black;
-
 }
 .square > .leftTopWallHoricontally{
     border-bottom: solid 2px darkblue;
-
 }
 .square > .rightTopWallHoricontally{
     border-bottom: solid 2px darkblue;
-
 }
 .square > .leftTopWallVertically{
     border-right: solid 5px red;
-
 }
 .square > .leftBottomWallVertically{
     border-right: solid 5px red;
-
 }
 .squareCover{
     display:grid;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
     gap:0px;
-
 }
 .toolbarMain{
     margin-top:27px;

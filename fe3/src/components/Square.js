@@ -1,4 +1,5 @@
 import React from 'react'
+
 class Square extends React.Component{
     constructor(properties)
     {
@@ -17,13 +18,12 @@ class Square extends React.Component{
                         clickedSquare: properties.clickedSquare,
                         id: properties.id
                     }
-        
     }
     static getDerivedStateFromProps = (props, state) => {
         //console.log(state, props)
         return(props)
     }
-    build= (data) => {
+    build = (data) => {
         let className = data.target.className;
         let classes = className.split(' ');
         let parentClassName = data.target.parentNode.className;
@@ -38,9 +38,6 @@ class Square extends React.Component{
         }
     }
     hover = (data, square) => {
-
-
-        
         if(square == "betweenSquare")
         {
             let className = data.target.className;
@@ -68,11 +65,9 @@ class Square extends React.Component{
             //console.log("line")
         }
         this.setState({isHovered: true})
-
         if(this.state.clickedTool == 1)
         {
-                this.setState({wallDrawn : 1}) // horizontally
-                
+            this.setState({wallDrawn : 1}) // horizontally      
         }
         this.state.hoveredSquare(data, this.state.id);
     }
@@ -108,16 +103,13 @@ class Square extends React.Component{
     click = (data) => {
         console.log("clicked",data.target, this.state.id)
         this.state.clickedSquare(data, this.state.id);
-
     }
+    
     render () {
-        //return("test")
-        //console.log("render boxes" + this.state.superModeIs(), this.state.mode, this.state.wallDrawn)
         if(this.state.superModeIs() == 0)
         {
             let classes = "square"
             if(this.state.adminMode) classes+= " lineSquare"
-            
             if(this.state.adminMode)
             {
                 //classes
@@ -135,37 +127,31 @@ class Square extends React.Component{
                         leftTop += " leftTopWallVertically"
                         leftBottom += " leftBottomWallVertically"
                 }
-
-
                 return  <div    className={classes}
                                 id = {this.state.id}
                                 onClick={(data) => {this.click(data)}}
                                 onMouseOver= {(data)=> {this.hover(data, "lineSquare")}}
                                 onMouseOut= {(data) => {this.endHover(data, "lineSquare")}}
                         >
-                        {
-                            (this.state.mode != 0 && this.state.isHovered) ? 
-                            <div style={{position:'absolute'}}><div style={{margin:'2px', fontSize:24, textAlign:'center', color:'black'}}>{this.state.icons[this.state.mode]}</div></div> : 
-                            ''
-                        }
+                            {
+                                (this.state.mode != 0 && this.state.isHovered) ? 
+                                <div style={{position:'absolute'}}><div style={{margin:'2px', fontSize:24, textAlign:'center', color:'black'}}>{this.state.icons[this.state.mode]}</div></div> : 
+                                ''
+                            }
                             <div    className=
                                         {leftTop}
-                                    
                             >
                             </div>
                             <div    className=
                                         {rightTop}
-                                    
                             >
                             </div>
                             <div    className = 
                                         {leftBottom}
-                                    
                             >
                             </div>
                             <div    className=
-                                        {rightBottom}
-                                    
+                                        {rightBottom}  
                             >
                             </div>
                         </div>
@@ -186,19 +172,45 @@ class Square extends React.Component{
             var rightTop = "rightTop lBottom "+(this.state.x+1+(Math.floor((this.state.x) / this.state.horizontalAmount)));
             var leftBottom = "leftBottom rTop "+(this.state.x+this.state.horizontalAmount+1+(Math.floor((this.state.x) / this.state.horizontalAmount)));
             var rightBottom = "rightBottom lTop "+(this.state.x+this.state.horizontalAmount+1+1+(Math.floor((this.state.x) / this.state.horizontalAmount)));
-            
-            return  <div    className="square betweenSquare"
+            return  <div    
+                            className="square betweenSquare"
                             id = {this.state.id}
                     >
                         {
-                            (this.state.isHovered) ? 
-                            <div style={{position:'absolute'}}><div style={{margin:'2px', fontSize:24, textAlign:'center', color:'black'}}>{this.state.icons[this.state.mode]}</div></div> : 
-                            ''
+                            (this.state.isHovered)
+                            ? 
+                                <div style={{position:'absolute'}}>
+                                    <div style={{margin:'2px', fontSize:24, textAlign:'center', color:'black'}}>
+                                        {this.state.icons[this.state.mode]}
+                                    </div>
+                                </div>
+                            : 
+                                ''
                         }
-                        <div className={leftTop} onMouseOver={(data) => this.hover(data, "betweenSquare")} onMouseOut={(data) => {this.endHover(data, "betweenSquare")}}></div>
-                        <div className={rightTop} onMouseOver={(data) => this.hover(data, "betweenSquare")} onMouseOut={(data) => {this.endHover(data, "betweenSquare")}}></div>
-                        <div className = {leftBottom} onMouseOver={(data) => this.hover(data, "betweenSquare")} onMouseOut={(data) => {this.endHover(data, "betweenSquare")}}></div>
-                        <div className={rightBottom} onMouseOver={(data) => this.hover(data, "betweenSquare")} onMouseOut={(data) => {this.endHover(data, "betweenSquare")}}></div>
+                        <div
+                                className={leftTop}
+                                onMouseOver={(data) => this.hover(data, "betweenSquare")}
+                                onMouseOut={(data) => {this.endHover(data, "betweenSquare")}}
+                        >
+                        </div>
+                        <div    
+                                className={rightTop}
+                                onMouseOver={(data) => this.hover(data, "betweenSquare")}
+                                onMouseOut={(data) => {this.endHover(data, "betweenSquare")}}
+                        >
+                        </div>
+                        <div
+                                className = {leftBottom}
+                                onMouseOver={(data) => this.hover(data, "betweenSquare")}
+                                onMouseOut={(data) => {this.endHover(data, "betweenSquare")}}
+                        >
+                        </div>
+                        <div
+                                className={rightBottom}
+                                onMouseOver={(data) => this.hover(data, "betweenSquare")}
+                                onMouseOut={(data) => {this.endHover(data, "betweenSquare")}}
+                        >
+                        </div>
                     </div>
         }
     }

@@ -7,8 +7,7 @@ import AdminView from './AdminView.js'
 import './AdminView.css'
 import Point from './Point.js'
 
-const App = () => {
-    
+const App = () => {   
     if (chayns.env.user.adminMode)
     {
         console.log("start ", chayns.env.site)
@@ -16,9 +15,6 @@ const App = () => {
     }
     else
         return <UserView />
-    
-    
-
 };
 
 export default App;
